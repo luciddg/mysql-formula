@@ -62,6 +62,7 @@ mysql_config:
     - source: salt://mysql/files/my-include.cnf
 {% else %}
     - source: salt://mysql/files/my.cnf
+    - makedirs: True
 {% endif %}
     {% if os_family in ['Debian', 'Gentoo', 'RedHat'] %}
     - user: root
